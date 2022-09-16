@@ -1,0 +1,7 @@
+mklink /j  C:\study\vue-launch-template\src\api\demo  C:\study\vue-launch-template-demo\api
+
+mklink /j C:\study\vue-launch-template\src\router\routes\modules\demo C:\study\vue-launch-template-demo\routes
+
+mklink /j C:\study\vue-launch-template\src\views\demo C:\study\vue-launch-template-demo\views
+
+mklink /j  C:\study\vue-launch-template\mock\demo  C:\study\vue-launch-template-demo\mock
