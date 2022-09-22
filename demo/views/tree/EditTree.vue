@@ -1,7 +1,7 @@
 <template>
   <PageWrapper title="Tree函数操作示例">
     <Row :gutter="[16, 16]">
-      <Col :span="8">
+      <AntCol :span="8">
         <BasicTree
           title="右侧操作按钮/自定义图标"
           helpMessage="帮助信息"
@@ -9,11 +9,11 @@
           :actionList="actionList"
           :renderIcon="createIcon"
         />
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <BasicTree title="右键菜单" :treeData="treeData" :beforeRightClick="getRightMenuList" />
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <BasicTree
           title="工具栏使用"
           toolbar
@@ -22,13 +22,13 @@
           :treeData="treeData"
           :beforeRightClick="getRightMenuList"
         />
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <BasicTree title="没有fieldNames，插槽有效" helpMessage="正确的示例" :treeData="treeData3">
           <template #title="item"> 插槽：{{ item.name }} </template>
         </BasicTree>
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <BasicTree
           title="有fieldNames后，插槽失效"
           helpMessage="错误的示例, 应该显示插槽的内容才对"
@@ -37,8 +37,8 @@
         >
           <template #title="item"> 插槽：{{ item.title }} </template>
         </BasicTree>
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <BasicTree
           title="有fieldNames后，actionList失效"
           helpMessage="错误的示例，应该在鼠标移上去时，显示新增和删除按钮才对"
@@ -46,7 +46,7 @@
           :actionList="actionList"
           :fieldNames="{ key: 'key', title: 'name' }"
         />
-      </Col>
+      </AntCol>
     </Row>
   </PageWrapper>
 </template>
@@ -59,7 +59,7 @@
   import { PageWrapper } from '/@/components/Page'
 
   export default defineComponent({
-    components: { BasicTree, PageWrapper, Row, Col },
+    components: { BasicTree, PageWrapper, Row, AntCol: Col },
     setup() {
       function handlePlus(node: any) {
         console.log(node)

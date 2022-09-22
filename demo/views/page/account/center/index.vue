@@ -57,7 +57,7 @@
   import { defineComponent, computed } from 'vue'
   import { CollapseContainer } from '/@/components/Container/index'
   import Icon from '/@/components/Icon/index'
-  import Article from './Article.vue'
+  import CustomArticle from './Article.vue'
   import Application from './Application.vue'
   import Project from './Project.vue'
 
@@ -72,7 +72,7 @@
       Tag,
       Tabs,
       TabPane: Tabs.TabPane,
-      Article,
+      CustomArticle,
       Application,
       Project,
       [Row.name]: Row,

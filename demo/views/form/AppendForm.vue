@@ -3,8 +3,8 @@
     <CollapseContainer title="表单增删">
       <BasicForm @register="register" @submit="handleSubmit">
         <template #add="{ field }">
-          <Button v-if="Number(field) === 0" @click="add">+</Button>
-          <Button v-if="field > 0" @click="del(field)">-</Button>
+          <AntButton v-if="Number(field) === 0" @click="add">+</AntButton>
+          <AntButton v-if="field > 0" @click="del(field)">-</AntButton>
         </template>
       </BasicForm>
     </CollapseContainer>
@@ -16,10 +16,10 @@
   import { CollapseContainer } from '/@/components/Container/index'
   import { Input } from 'ant-design-vue'
   import { PageWrapper } from '/@/components/Page'
-  import { Button } from '/@/components/Button'
+  import { Button as AntButton } from '/@/components/Button'
 
   export default defineComponent({
-    components: { BasicForm, CollapseContainer, PageWrapper, [Input.name]: Input, Button },
+    components: { BasicForm, CollapseContainer, PageWrapper, [Input.name]: Input, AntButton },
     setup() {
       const [register, { appendSchemaByField, removeSchemaByFiled, validate }] = useForm({
         schemas: [

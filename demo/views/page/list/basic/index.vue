@@ -40,7 +40,7 @@
                   <div><span>开始时间</span>{{ item.datetime }}</div>
                 </div>
                 <div class="progress">
-                  <Progress :percent="item.percent" status="active" />
+                  <AntProgress :percent="item.percent" status="active" />
                 </div>
               </template>
             </a-list-item-meta>
@@ -51,7 +51,7 @@
   </PageWrapper>
 </template>
 <script lang="ts">
-  import { Progress, Row, Col } from 'ant-design-vue'
+  import { Progress as AntProgress, Row, Col } from 'ant-design-vue'
   import { defineComponent } from 'vue'
   import Icon from '/@/components/Icon/index'
   import { cardList } from './data'
@@ -61,7 +61,7 @@
   export default defineComponent({
     components: {
       Icon,
-      Progress,
+      AntProgress,
       PageWrapper,
       [List.name]: List,
       [List.Item.name]: List.Item,

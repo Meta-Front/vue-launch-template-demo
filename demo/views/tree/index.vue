@@ -1,12 +1,12 @@
 <template>
   <PageWrapper title="Tree基础示例">
     <Row :gutter="[16, 16]">
-      <Col :span="8">
+      <AntCol :span="8">
         <BasicTree title="基础示例，默认展开第一层" :treeData="treeData" defaultExpandLevel="1">
           <template #title> 123123 </template>
         </BasicTree>
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <BasicTree
           title="可勾选，默认全部展开"
           :treeData="treeData"
@@ -14,8 +14,8 @@
           defaultExpandAll
           @check="handleCheck"
         />
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <BasicTree
           title="指定默认展开/勾选示例"
           :treeData="treeData"
@@ -23,16 +23,16 @@
           :expandedKeys="['0-0']"
           :checkedKeys="['0-0']"
         />
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <BasicTree
           title="懒加载异步树"
           ref="asyncTreeRef"
           :treeData="tree"
           :load-data="onLoadData"
         />
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <Card title="异步数据，默认展开">
           <template #extra>
             <a-button @click="loadTreeData" :loading="treeLoading">加载数据</a-button>
@@ -41,15 +41,15 @@
             <BasicTree ref="asyncExpandTreeRef" :treeData="tree2" />
           </Spin>
         </Card>
-      </Col>
-      <Col :span="8">
+      </AntCol>
+      <AntCol :span="8">
         <Card title="BasicTree内置加载">
           <template #extra>
             <a-button @click="loadTreeData2" :loading="treeLoading">请求数据</a-button>
           </template>
           <BasicTree ref="loadTreeRef" :treeData="tree2" :loading="treeLoading" />
         </Card>
-      </Col>
+      </AntCol>
     </Row>
   </PageWrapper>
 </template>
@@ -63,7 +63,7 @@
   import { isArray } from '/@/utils/is'
 
   export default defineComponent({
-    components: { BasicTree, PageWrapper, Card, Row, Col, Spin },
+    components: { BasicTree, PageWrapper, Card, Row, AntCol: Col, Spin },
     setup() {
       const asyncTreeRef = ref<Nullable<TreeActionType>>(null)
       const asyncExpandTreeRef = ref<Nullable<TreeActionType>>(null)

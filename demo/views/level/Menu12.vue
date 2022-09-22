@@ -2,11 +2,11 @@
   <div class="p-5">
     多层级缓存-页面1-2
     <br />
-    <Input />
+    <AntInput />
   </div>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import { Input } from 'ant-design-vue'
-  export default defineComponent({ name: 'Menu12Demo', components: { Input } })
+  import { Input as AntInput } from 'ant-design-vue'
+  export default defineComponent({ name: 'Menu12Demo', components: { AntInput } })
 </script>

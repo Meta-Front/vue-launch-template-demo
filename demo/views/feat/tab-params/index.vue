@@ -3,18 +3,18 @@
     Current Param : {{ params }}
     <br />
     Keep Alive
-    <Input />
+    <AntInput />
   </PageWrapper>
 </template>
 <script lang="ts">
   import { computed, defineComponent, unref } from 'vue'
   import { useRouter } from 'vue-router'
   import { PageWrapper } from '/@/components/Page'
-  import { Input } from 'ant-design-vue'
+  import { Input as AntInput } from 'ant-design-vue'
 
   export default defineComponent({
     name: 'TestTab',
-    components: { PageWrapper, Input },
+    components: { PageWrapper, AntInput },
     setup() {
       const { currentRoute } = useRouter()
       return {

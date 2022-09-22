@@ -1,7 +1,7 @@
 <template>
   <PageWrapper title="动画组件示例">
     <div class="flex">
-      <Select
+      <AntSelect
         :options="options"
         v-model:value="value"
         placeholder="选择动画"
@@ -16,7 +16,7 @@
 </template>
 <script lang="ts">
   import { defineComponent, ref } from 'vue'
-  import { Select } from 'ant-design-vue'
+  import { Select as AntSelect } from 'ant-design-vue'
   import { PageWrapper } from '/@/components/Page'
   import {
     FadeTransition,
@@ -57,7 +57,7 @@
 
   export default defineComponent({
     components: {
-      Select,
+      AntSelect,
       PageWrapper,
       FadeTransition,
       ScaleTransition,

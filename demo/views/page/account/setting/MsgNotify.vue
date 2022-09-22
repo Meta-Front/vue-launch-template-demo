@@ -6,7 +6,7 @@
           <ListItemMeta>
             <template #title>
               {{ item.title }}
-              <Switch
+              <AntSwitch
                 class="extra"
                 checked-children="开"
                 un-checked-children="关"
@@ -23,7 +23,7 @@
   </CollapseContainer>
 </template>
 <script lang="ts">
-  import { List, Switch } from 'ant-design-vue'
+  import { List, Switch as AntSwitch } from 'ant-design-vue'
   import { defineComponent } from 'vue'
   import { CollapseContainer } from '/@/components/Container/index'
 
@@ -35,7 +35,7 @@
       List,
       ListItem: List.Item,
       ListItemMeta: List.Item.Meta,
-      Switch
+      AntSwitch
     },
     setup() {
       return {

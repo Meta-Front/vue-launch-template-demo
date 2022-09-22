@@ -3,7 +3,7 @@
     当前参数：{{ params }}
     <br />
     输入参数切换路由：
-    <Input v-model:value="value" placeholder="建议为url标准字符，输入后点击切换" />
+    <AntInput v-model:value="value" placeholder="建议为url标准字符，输入后点击切换" />
     <a-button type="primary" @click="handleClickGo">切换路由</a-button>
     <br />
     切换路由后
@@ -14,14 +14,14 @@
   </PageWrapper>
 </template>
 <script lang="ts">
-  import { Input } from 'ant-design-vue'
+  import { Input as AntInput } from 'ant-design-vue'
   import { computed, defineComponent, ref, unref } from 'vue'
   import { useRouter } from 'vue-router'
   import { PageWrapper } from '/@/components/Page'
 
   export default defineComponent({
     name: 'TestMenu',
-    components: { PageWrapper, Input },
+    components: { PageWrapper, AntInput },
     setup() {
       const { currentRoute, replace } = useRouter()
       const value = ref<string>('')

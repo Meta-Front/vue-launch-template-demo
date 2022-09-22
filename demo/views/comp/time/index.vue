@@ -1,34 +1,34 @@
 <template>
   <PageWrapper title="时间组件示例">
     <CollapseContainer title="基础示例">
-      <Time :value="time1" />
+      <CustomTime :value="time1" />
       <br />
-      <Time :value="time2" />
+      <CustomTime :value="time2" />
     </CollapseContainer>
 
     <CollapseContainer title="定时更新" class="my-4">
-      <Time :value="now" :step="1" />
+      <CustomTime :value="now" :step="1" />
       <br />
-      <Time :value="now" :step="5" />
+      <CustomTime :value="now" :step="5" />
     </CollapseContainer>
 
     <CollapseContainer title="定时更新">
-      <Time :value="now" mode="date" />
+      <CustomTime :value="now" mode="date" />
       <br />
-      <Time :value="now" mode="datetime" />
+      <CustomTime :value="now" mode="datetime" />
       <br />
-      <Time :value="now" />
+      <CustomTime :value="now" />
     </CollapseContainer>
   </PageWrapper>
 </template>
 <script lang="ts">
   import { defineComponent, reactive, toRefs } from 'vue'
   import { PageWrapper } from '/@/components/Page'
-  import { Time } from '/@/components/Time'
+  import { CustomTime } from '/@/components/Time'
   import { CollapseContainer } from '/@/components/Container/index'
 
   export default defineComponent({
-    components: { PageWrapper, Time, CollapseContainer },
+    components: { PageWrapper, CustomTime, CollapseContainer },
     setup() {
       const now = new Date().getTime()
       const state = reactive({
